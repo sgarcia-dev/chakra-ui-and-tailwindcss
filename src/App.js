@@ -8,11 +8,15 @@ import {
   Code,
   Grid,
   theme,
+  Button,
+  useDisclosure,
 } from '@chakra-ui/react';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 import { Logo } from './Logo';
+import MyModal from './MyModal';
 
 function App() {
+  const { isOpen, onClose, onOpen } = useDisclosure()
   return (
     <ChakraProvider theme={theme}>
       <Box textAlign="center" fontSize="xl">
@@ -32,9 +36,11 @@ function App() {
             >
               Learn Chakra
             </Link>
+            <Button onClick={onOpen}>Click me to Show Modal</Button>
           </VStack>
         </Grid>
       </Box>
+      <MyModal isOpen={isOpen} onClose={onClose} />
     </ChakraProvider>
   );
 }
