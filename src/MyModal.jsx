@@ -22,7 +22,7 @@ export default function MyModal({ isOpen, onClose }) {
           Possimus nisi incidunt pariatur voluptate at cupiditate illo qui saepe? Rem veritatis, at eaque distinctio, mollitia voluptas saepe dolore nulla commodi, quam sunt unde sapiente obcaecati recusandae placeat. Veniam, perspiciatis?</p>
         </ModalBody>
 
-        <ModalFooter className="flex justify-between">
+        <ModalFooter className="my-class-name">
           <Button colorScheme="blue" mr={3} onClick={onClose}>
             Close
           </Button>
